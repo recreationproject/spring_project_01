@@ -1,4 +1,4 @@
-package com.erp.entity.admin;
+package com.erp.entity;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name="ADMIN_RESPONSIBILITY")
-public class AdminResponsibility {
+public class Responsibility {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,13 +35,13 @@ public class AdminResponsibility {
 	
 	@JsonBackReference
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "responsibility", fetch = FetchType.LAZY)
-	private Set<AdminUser> users = new HashSet<>();
+	private Set<User> users = new HashSet<>();
 	
 
-	public Set<AdminUser> getUsers() {
+	public Set<User> getUsers() {
 		return users;
 	}
-	public void setUsers(Set<AdminUser> users) {
+	public void setUsers(Set<User> users) {
 		this.users = users;
 	}
 	public Integer getId() {

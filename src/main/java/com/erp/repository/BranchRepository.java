@@ -1,11 +1,11 @@
-package com.erp.repository.admin;
+package com.erp.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.erp.entity.admin.AdminBranch;
+import com.erp.entity.Branch;
 
 @Repository
-public interface BranchRepository extends JpaRepository <AdminBranch,Integer> {
+public interface BranchRepository extends JpaRepository <Branch,Integer> {
 
 }

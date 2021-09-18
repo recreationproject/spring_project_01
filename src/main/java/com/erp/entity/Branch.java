@@ -1,4 +1,4 @@
-package com.erp.entity.admin;
+package com.erp.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="ADMIN_BRANCH")
-public class AdminBranch {
+public class Branch {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

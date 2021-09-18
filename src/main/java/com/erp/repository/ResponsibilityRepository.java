@@ -1,12 +1,12 @@
-package com.erp.repository.admin;
+package com.erp.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.erp.entity.admin.AdminCompany;
-import com.erp.entity.admin.AdminResponsibility;
+import com.erp.entity.Company;
+import com.erp.entity.Responsibility;
 
 @Repository
-public interface ResponsibilityRepository extends JpaRepository <AdminResponsibility,Integer>{
+public interface ResponsibilityRepository extends JpaRepository <Responsibility,Integer>{
 
 }

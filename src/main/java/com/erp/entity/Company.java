@@ -1,4 +1,4 @@
-package com.erp.entity.admin;
+package com.erp.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="ADMIN_COMPANY")
-public class AdminCompany {
+public class Company {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,4 +1,4 @@
-package com.erp.entity.admin;
+package com.erp.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,7 +19,7 @@ import lombok.ToString;
 
 @Entity
 @Table(name="ADMIN_USER")
-public class AdminUser {
+public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "USER_ID")
@@ -38,7 +38,7 @@ public class AdminUser {
 	@JsonManagedReference
 	@ManyToOne
 	@JoinColumn(name = "RESPONSIBILITY_ID", nullable = false)
-	private AdminResponsibility responsibility;
+	private Responsibility responsibility;
 	
 
 	public Integer getId() {
@@ -66,10 +66,10 @@ public class AdminUser {
 		this.userPassword = userPassword;
 	}
 
-	public AdminResponsibility getResponsibility() {
+	public Responsibility getResponsibility() {
 		return responsibility;
 	}
-	public void setResponsibility(AdminResponsibility responsibility) {
+	public void setResponsibility(Responsibility responsibility) {
 		this.responsibility = responsibility;
 	}
 	public Integer getBranchId() {
