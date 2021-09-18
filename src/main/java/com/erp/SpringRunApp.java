@@ -9,7 +9,7 @@ public class SpringRunApp {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringRunApp.class, args);
 		
-		System.out.println("test");
+		System.out.println("Welcome runt test spring boot practice");
 	}
 
 }

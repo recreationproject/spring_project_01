@@ -1,4 +1,4 @@
-package com.erp.controller;
+package com.erp.controller.admin;
 
 import java.net.URI;
 import java.net.URL;
@@ -23,8 +23,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.erp.entity.User;
-import com.erp.repository.UserRepository;
+import com.erp.entity.admin.AdminUser;
+import com.erp.repository.admin.UserRepository;
 
 @RestController
 @RequestMapping(path="/user")
@@ -34,24 +34,24 @@ public class UserController {
 	private UserRepository userRepository;
 	
 	@GetMapping(path = "/find/{id}")
-    public ResponseEntity<User>  findUser(@PathVariable(value = "id") Integer id) {
+    public ResponseEntity<AdminUser>  findUser(@PathVariable(value = "id") Integer id) {
 		
-		Optional<User> user = userRepository.findById(id);
+		Optional<AdminUser> user = userRepository.findById(id);
 		
-		return new ResponseEntity<User>(user.get(), HttpStatus.OK);
+		return new ResponseEntity<AdminUser>(user.get(), HttpStatus.OK);
 
     }
 	
 	
 
 	@GetMapping(path = "/all")
-    public List<User> getAllUsers() {     
+    public List<AdminUser> getAllUsers() {     
        return userRepository.findAll();
     }
 	
 
 	@PostMapping(path = "/add")
-    public void addUser(@RequestBody User user) {
+    public void addUser(@RequestBody AdminUser user) {
 
 		 userRepository.save(user);
 		
